@@ -1,4 +1,4 @@
-# 344. Reverse String - 2/12/2020
+# 344. Reverse String - Solved 2/12/2020
 # https://leetcode.com/problems/reverse-string/
 
 # Instructions:

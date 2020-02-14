@@ -1,4 +1,5 @@
-# 121. Best Time to Buy and Sell Stock
+# 121. Best Time to Buy and Sell Stock - Solved 2/13/2020
+# Difficulty: Easy
 # https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 # Instructions:
 # Say you have an array for which the ith element is the price of a given stock on day i.
@@ -6,7 +7,26 @@
 # design an algorithm to find the maximum profit.
 # Note that you cannot sell a stock before you buy one.
 
+# updated verion 
 def maxProfit(prices):
+        n = len(prices)
+        if n <= 1:
+                return 0
+        maxprofit = 0
+        low = prices[0]
+        for i in range(1,n):
+                low = min(low,prices[i])
+                maxprofit = max(maxprofit, prices[i] - low)
+        return maxprofit
+
+# print(maxProfit([7,1,5,3,6,4]))
+
+# Success - Details
+# Runtime: 64 ms, faster than 61.89% of Python3 online submissions for Best Time to Buy and Sell Stock.
+# Memory Usage: 13.7 MB, less than 98.85% of Python3 online submissions for Best Time to Buy and Sell Stock.
+
+
+def maxProfit_old(prices):
         profit = 0
         for i in  range(len(prices)):
                 mx = max(prices[i:])
@@ -17,7 +37,7 @@ def maxProfit(prices):
 
 #my runtime is O(n**2) best solution is O(n)
 
-# print(maxProfit([7,1,5,3,6,4]))
+# print(maxProfit_old([7,1,5,3,6,4]))
 
 # Example 1:
 # Input: [7,1,5,3,6,4]

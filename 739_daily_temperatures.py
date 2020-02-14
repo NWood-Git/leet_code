@@ -9,7 +9,7 @@
 # Note: The length of temperatures will be in the range [1, 30000]. Each temperature will be an integer in the range [30, 100]. 
 
 
-# My Solution Below - Worked - However it is not optimal and took too long on the larger lists
+# My Solution Below - Worked - However it is not optimal and took too long on the larger lists - NOT Accepted By Leet Code
 
 def dailyTemperatures(T):
     wait_list = []

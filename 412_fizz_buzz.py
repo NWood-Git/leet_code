@@ -1,4 +1,5 @@
 # 412. Fizz Buzz - Solved 2/13/2020
+# Difficulty: Easy
 # https://leetcode.com/problems/fizz-buzz/
 # Instructions:
 # Write a program that outputs the string representation of numbers from 1 to n.

@@ -1,4 +1,5 @@
 # 344. Reverse String - Solved 2/12/2020
+# Difficulty: Easy
 # https://leetcode.com/problems/reverse-string/
 
 # Instructions:

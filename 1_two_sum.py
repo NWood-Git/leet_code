@@ -1,4 +1,4 @@
-# 1. Two Sum
+# 1. Two Sum - Solved 2/18/2020
 # Difficulty: Easy
 # https://leetcode.com/problems/two-sum/
 # Description:

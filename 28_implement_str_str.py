@@ -1,4 +1,5 @@
 # 28. Implement strStr() - Done 3/5/2020
+# Difficulty - Easy
 # https://leetcode.com/problems/implement-strstr/
 
 # Description: Implement strStr().

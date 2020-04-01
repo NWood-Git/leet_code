@@ -10,6 +10,54 @@
 # Output: false
 
 def isPalindrome(s):
+    front_idx  = 0
+    back_idx = -1
+    for i in range(len(s)//2 + 2):
+        while front_idx < len(s) and s[front_idx].isalnum() == False:
+            front_idx += 1
+        while back_idx * -1 <= len(s) and s[back_idx].isalnum() == False:
+            back_idx -= 1
+        if front_idx == len(s):
+            return True
+        elif s[front_idx].lower() != s[back_idx].lower():
+                return False
+        elif s[front_idx].lower() == s[back_idx].lower():
+            front_idx += 1
+            back_idx -= 1
+    return True
+
+# Success - Details 
+# Runtime: 92 ms, faster than 5.13% of Python3 online submissions for Valid Palindrome.
+# Memory Usage: 14.3 MB, less than 44.05% of Python3 online submissions for Valid Palindrome.
+
+# Runtime: 92 ms, faster than 5.13% of Python3 online submissions for Valid Palindrome.
+# Memory Usage: 14.2 MB, less than 46.43% of Python3 online submissions for Valid Palindrome.
+
+### This is on the righ track but doesn't work fro the werid ones ex: "......a....." or  ".,"
+# def isPalindrome(s):
+#     front_idx  = 0
+#     back_idx = -1
+#     for i in range(len(s)//2):
+#         while s[front_idx].isalnum() == False:
+#             front_idx += 1
+#         while s[back_idx].isalnum() == False:
+#             back_idx -= 1
+#         if s[front_idx].lower() == s[back_idx].lower():
+#             front_idx += 1
+#             back_idx -= 1
+#         else:
+#             return False
+#     return True
+
+print(isPalindrome("race a car"))
+print(isPalindrome("racecar"))
+print(isPalindrome("raceecar"))
+print(isPalindrome("A man, a plan, a canal: Panama"))
+print(isPalindrome("......a....."))
+print(isPalindrome("......ab....."))
+print(isPalindrome(".,"))
+
+def isPalindrome1(s):
     s = ''.join(i.lower() for i in s if i.isalnum())
     idx1 = 0
     idx2 = -1
@@ -28,14 +76,14 @@ def isPalindrome(s):
 # Runtime: 52 ms, faster than 44.50% of Python3 online submissions for Valid Palindrome.
 # Memory Usage: 18.8 MB, less than 5.95% of Python3 online submissions for Valid Palindrome.
 
-print(isPalindrome("race a car"))
-print(isPalindrome("racecar"))
-print(isPalindrome("raceecar"))
-print(isPalindrome("A man, a plan, a canal: Panama"))
+# print(isPalindrome1("race a car"))
+# print(isPalindrome1("racecar"))
+# print(isPalindrome1("raceecar"))
+# print(isPalindrome1("A man, a plan, a canal: Panama"))
 
 
 
-def isPalindrome(s):
+def isPalindrome2(s):
     s = ''.join(i.lower() for i in s if i.isalnum())
     n = len(s) // 2
     if len(s) % 2 == 0:
@@ -57,13 +105,13 @@ def isPalindrome(s):
 # Runtime: 48 ms, faster than 60.61% of Python3 online submissions for Valid Palindrome.
 # Memory Usage: 18.7 MB, less than 5.95% of Python3 online submissions for Valid Palindrome.
 
-# print(isPalindrome1("race a car"))
-# print(isPalindrome1("racecar"))
-# print(isPalindrome1("raceecar"))
-# print(isPalindrome1("A man, a plan, a canal: Panama"))
+# print(isPalindrome2("race a car"))
+# print(isPalindrome2("racecar"))
+# print(isPalindrome2("raceecar"))
+# print(isPalindrome2("A man, a plan, a canal: Panama"))
 
 
-def isPalindrome2(s):
+def isPalindrome3(s):
     s = ''.join(i.lower() for i in s if i.isalnum())
     rev_s = s[::-1]
     return s == rev_s
@@ -79,7 +127,7 @@ def isPalindrome2(s):
 # Runtime: 44 ms, faster than 75.36% of Python3 online submissions for Valid Palindrome.
 # Memory Usage: 18.7 MB, less than 5.95% of Python3 online submissions for Valid Palindrome.
 
-# print(isPalindrome2("race a car"))
-# print(isPalindrome2("racecar"))
-# print(isPalindrome2("raceecar"))
-# print(isPalindrome2("A man, a plan, a canal: Panama"))
+# print(isPalindrome3("race a car"))
+# print(isPalindrome3("racecar"))
+# print(isPalindrome3("raceecar"))
+# print(isPalindrome3("A man, a plan, a canal: Panama"))

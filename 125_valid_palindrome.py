@@ -10,14 +10,15 @@
 # Output: false
 
 def isPalindrome(s):
+    s_len = len(s)
     front_idx  = 0
     back_idx = -1
-    for i in range(len(s)//2 + 2):
+    for i in range(s_len//2 + 2):
         while front_idx < len(s) and s[front_idx].isalnum() == False:
             front_idx += 1
-        while back_idx * -1 <= len(s) and s[back_idx].isalnum() == False:
+        while back_idx * -1 <= s_len and s[back_idx].isalnum() == False:
             back_idx -= 1
-        if front_idx == len(s):
+        if front_idx == s_len:
             return True
         elif s[front_idx].lower() != s[back_idx].lower():
                 return False
@@ -26,12 +27,13 @@ def isPalindrome(s):
             back_idx -= 1
     return True
 
-# Success - Details 
-# Runtime: 92 ms, faster than 5.13% of Python3 online submissions for Valid Palindrome.
-# Memory Usage: 14.3 MB, less than 44.05% of Python3 online submissions for Valid Palindrome.
+# Success - Details
 
-# Runtime: 92 ms, faster than 5.13% of Python3 online submissions for Valid Palindrome.
-# Memory Usage: 14.2 MB, less than 46.43% of Python3 online submissions for Valid Palindrome.
+# Runtime: 80 ms, faster than 6.46% of Python3 online submissions for Valid Palindrome.
+# Memory Usage: 14.4 MB, less than 38.09% of Python3 online submissions for Valid Palindrome.
+
+# Runtime: 80 ms, faster than 6.46% of Python3 online submissions for Valid Palindrome.
+# Memory Usage: 14.2 MB, less than 47.62% of Python3 online submissions for Valid Palindrome.
 
 ### This is on the righ track but doesn't work fro the werid ones ex: "......a....." or  ".,"
 # def isPalindrome(s):

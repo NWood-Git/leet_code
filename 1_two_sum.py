@@ -9,6 +9,48 @@
 # Because nums[0] + nums[1] = 2 + 7 = 9,
 # return [0, 1].
 
+
+def twoSum(nums,target):
+    num_dict = {}
+    for i in range(len(nums)):
+        num = nums[i]
+        if num in num_dict.keys():
+            num_dict[num].append(i)
+        else:
+            num_dict[num] = [i]
+
+    for i in range(len(nums)):
+        curr_num = nums[i]
+        complement = target - curr_num
+        if complement in num_dict.keys():
+            if complement != curr_num:
+                return [i, num_dict[complement][0]]
+            elif num_dict[complement][0] == i and len(num_dict[complement]) > 1:
+                return [i, num_dict[complement][1]]
+
+# Success - Details
+
+# Runtime: 44 ms, faster than 91.97% of Python3 online submissions for Two Sum.
+# Memory Usage: 16.4 MB, less than 5.11% of Python3 online submissions for Two Sum.
+
+# Runtime: 48 ms, faster than 78.09% of Python3 online submissions for Two Sum.
+# Memory Usage: 16.5 MB, less than 5.11% of Python3 online submissions for Two Sum.
+
+# Runtime: 56 ms, faster than 39.82% of Python3 online submissions for Two Sum.
+# Memory Usage: 16.4 MB, less than 5.11% of Python3 online submissions for Two Sum.
+
+
+
+nums = [2, 7, 11, 15]
+target = 9
+print(twoSum(nums, target))
+nums = [3,2,4]
+target = 6
+print(twoSum(nums, target))
+
+
+
+'''
 def twoSum(nums,target):
         k = 0
         for i in nums:
@@ -25,7 +67,7 @@ def twoSum(nums,target):
 nums = [3,2,4]
 target = 6
 print(twoSum(nums, target))
-
+'''
 
 
 # This works for 22/29 test cases but has a runtime error - too inefficient O(n**2)?

@@ -1,4 +1,4 @@
-# 21. Merge Two Sorted Lists (Linked Lists)
+# 21. Merge Two Sorted Lists (Linked Lists) - Solved 4/30/2020
 # Difficulty - Easy
 # https://leetcode.com/problems/merge-two-sorted-lists/
 

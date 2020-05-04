@@ -22,20 +22,46 @@
 # 4 Set previous as current, current as next and next as it's next node
 # 5 set the head pointer to the previous Node
 
-class Solution:
-    def reverseList(self, head: ListNode) -> ListNode:
-        prev = None
-        curr = head
-        next = None
+class ListNode:
+    def __init__(self, val=0, next=None, prev=None):
+        self.val = val
+        self.next = next
+    
+def print_ll(head):
+    current = head
+    print(current.val, end = ' -> ')
+    while current.next:
+        current = current.next
+        print(current.val, end = ' -> ')
+    print()
 
-        while curr:
-            next = curr.next
-            curr.next = prev
-            prev = curr
-            curr = next
 
-        head = prev
-        return head
+def reverseList( head: ListNode) -> ListNode:
+    prev = None
+    curr = head
+    next = None
+
+    while curr:
+        next = curr.next
+        curr.next = prev
+        prev = curr
+        curr = next
+
+    head = prev
+    return head
+
+e1 = ListNode(1)
+e2 = ListNode(2)
+e1.next = e2
+e3 = ListNode(3)
+e2.next = e3
+e4 = ListNode(4)
+e3.next = e4 
+
+print_ll(e1)
+x = reverseList(e1)
+print_ll(x)
+
 
 # Success - Details 
 # Runtime: 36 ms, faster than 59.65% of Python3 online submissions for Reverse Linked List.
@@ -79,7 +105,7 @@ class Solution:
 # Memory Usage: 15.3 MB, less than 26.14% of Python3 online submissions for Reverse Linked List.
 
 '''
-
+'''
 #change prev to temp 
 
 class ListNode:
@@ -155,8 +181,8 @@ class LinkedList:
             current = current.next
             print(current.val, end = ' -> ')
         print()
-
-
+'''
+'''
 e1 = ListNode(1)
 e2 = ListNode(2)
 e3 = ListNode(3)
@@ -179,3 +205,4 @@ print()
 # while current.prev:
 #     current = current.prev
 # print(current.val)
+'''

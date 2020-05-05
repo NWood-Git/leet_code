@@ -34,7 +34,32 @@ class ListNode:
         self.val = x
         self.next = None
 
+#Tortise and Hare Algorithm
 
+def detectCycle(head):
+    if not head:
+        return None
+    tortise = hare = head
+    while hare and hare.next:
+        tortise, hare = tortise.next, hare.next.next
+        if tortise == hare:
+            while head != tortise:
+                head, tortise = head.next, tortise.next
+            return head
+    return None
+
+# Success - Details: 
+# Runtime: 48 ms, faster than 81.01% of Python3 online submissions for Linked List Cycle II.
+# Memory Usage: 16.8 MB, less than 100.00% of Python3 online submissions for Linked List Cycle II.
+
+# Runtime: 48 ms, faster than 81.01% of Python3 online submissions for Linked List Cycle II.
+# Memory Usage: 16.8 MB, less than 100.00% of Python3 online submissions for Linked List Cycle II.
+
+# Runtime: 48 ms, faster than 81.01% of Python3 online submissions for Linked List Cycle II.
+# Memory Usage: 17 MB, less than 100.00% of Python3 online submissions for Linked List Cycle II.
+
+'''
+# "Naive Approach" - My Initial Soution
 def detectCycle(head: ListNode) -> ListNode:
     if head == None or head.next == None:
         return None
@@ -66,11 +91,11 @@ def detectCycle(head: ListNode) -> ListNode:
 
 # Runtime: 52 ms, faster than 56.33% of Python3 online submissions for Linked List Cycle II.
 # Memory Usage: 16.9 MB, less than 100.00% of Python3 online submissions for Linked List Cycle II.
-
-
-
-
 '''
+
+
+
+# '''
 e1 = ListNode(3)
 e2 = ListNode(2)
 e1.next = e2
@@ -80,7 +105,7 @@ e4 = ListNode(-4)
 e3.next = e4
 e4.next = e2
 # e1 --> e2 --> e3 --> e4 --> back to e2 
-'''
+# '''
 
 '''
 e1 = ListNode(1)

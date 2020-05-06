@@ -15,6 +15,31 @@
 
 # Output: [1,2,2,3,5,6]
 
+
+def merge(nums1, m: int, nums2, n: int) -> None:
+    """
+    Do not return anything, modify nums1 in-place instead.
+    """
+    nums1_idx = 0
+    while nums1_idx < len(nums1) and nums2:
+        if nums2[0] <= nums1[nums1_idx]:
+            x = nums2.pop(0)
+            nums1.pop()
+            nums1.insert(nums1_idx, x)
+        nums1_idx += 1
+    nums1[(len(nums1) - len(nums2)):] = nums2
+
+# Success - Details 
+# Runtime: 28 ms, faster than 97.27% of Python3 online submissions for Merge Sorted Array.
+# Memory Usage: 13.8 MB, less than 6.15% of Python3 online submissions for Merge Sorted Array.
+
+# Runtime: 32 ms, faster than 88.03% of Python3 online submissions for Merge Sorted Array.
+# Memory Us
+
+# Runtime: 36 ms, faster than 66.32% of Python3 online submissions for Merge Sorted Array.
+# Memory Usage: 13.8 MB, less than 6.15% of Python3 online submissions for Merge Sorted Array.
+
+'''
 def merge(nums1, m, nums2, n):
     """Do not return anything, modify nums1 in-place instead."""
     nums1_idx = 0
@@ -29,15 +54,6 @@ def merge(nums1, m, nums2, n):
     for i in nums2:
         nums1.append(i)
 
-nums1 = [1,2,3,0,0,0]
-m = 3
-nums2 = [2,5,6]
-n = 3
-# Output: [1,2,2,3,5,6]
-
-merge(nums1, m, nums2, n)
-print(nums1)
-
 # Success - Details 
 # Runtime: 28 ms, faster than 97.14% of Python3 online submissions for Merge Sorted Array.
 # Memory Usage: 13.9 MB, less than 6.15% of Python3 online submissions for Merge Sorted Array.
@@ -47,3 +63,13 @@ print(nums1)
 
 # Runtime: 36 ms, faster than 65.24% of Python3 online submissions for Merge Sorted Array.
 # Memory Usage: 13.9 MB, less than 6.15% of Python3 online submissions for Merge Sorted Array.
+'''
+
+nums1 = [1,2,3,0,0,0]
+m = 3
+nums2 = [2,5,6]
+n = 3
+# Output: [1,2,2,3,5,6]
+
+merge(nums1, m, nums2, n)
+print(nums1)

@@ -15,9 +15,40 @@
 # Input: ["H","a","n","n","a","h"]
 # Output: ["h","a","n","n","a","H"]
 
+
+# Recursive answer 
+
+def reverseString(s):
+    def helper(l,r):
+        if l < r:
+            s[r], s[l] = s[l], s[r]
+            helper(l+1, r-1)
+    helper(0, len(s)-1)  
+''' # 
+class Solution:
+    def helper(self,l,r,s):
+            if l < r:
+                s[r], s[l] = s[l], s[r]
+                self.helper(l+1, r-1, s)
+                
+    def reverseString(self, s: List[str]) -> None:
+        """
+        Do not return anything, modify s in-place instead.
+        """
+        self.helper(0, len(s)-1, s)  
+'''
+# Success Details: 
+# Runtime: 228 ms, faster than 17.42% of Python3 online submissions for Reverse String.
+# Memory Usage: 38.3 MB, less than 5.81% of Python3 online submissions for Reverse String.
+
+# Runtime: 216 ms, faster than 52.11% of Python3 online submissions for Reverse String.
+# Memory Usage: 38 MB, less than 5.81% of Python3 online submissions for Reverse String.
+
+# Not recursive
+'''
 def reverseString(s):
     s.reverse()
-
+'''
 x = ["h","e","l","l","o"]
 reverseString(x)
 print(x)

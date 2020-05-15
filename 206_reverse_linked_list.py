@@ -35,7 +35,7 @@ def print_ll(head):
         print(current.val, end = ' -> ')
     print()
 
-
+# While Loop Solution
 def reverseList( head: ListNode) -> ListNode:
     prev = None
     curr = head
@@ -50,6 +50,39 @@ def reverseList( head: ListNode) -> ListNode:
     head = prev
     return head
 
+# Success - Details 
+# Runtime: 36 ms, faster than 59.65% of Python3 online submissions for Reverse Linked List.
+# Memory Usage: 15.4 MB, less than 25.00% of Python3 online submissions for Reverse Linked List.
+
+# Runtime: 36 ms, faster than 59.65% of Python3 online submissions for Reverse Linked List.
+# Memory Usage: 15.4 MB, less than 25.00% of Python3 online submissions for Reverse Linked List.
+
+
+# Recursive Solution
+'''
+def reverseList(head: ListNode) -> ListNode:
+    prev  = None
+    curr  = head
+    def helper_rev(prev, curr):
+        if not curr:
+            return prev
+        else:
+            ne_xt = curr.next
+            curr.next = prev
+            prev = curr
+            curr = ne_xt
+            return helper_rev(prev, curr)
+    return helper_rev(prev, curr)
+
+
+# Submission Detail
+# 27 / 27 test cases passed.
+# Status: Accepted
+# Runtime: 40 ms / 36 ms
+# Memory Usage: 18.4 MB / 18.6 MB
+# Your runtime beats 32.08 % / 62.23 % of python3 submissions.
+'''
+
 e1 = ListNode(1)
 e2 = ListNode(2)
 e1.next = e2
@@ -61,14 +94,6 @@ e3.next = e4
 print_ll(e1)
 x = reverseList(e1)
 print_ll(x)
-
-
-# Success - Details 
-# Runtime: 36 ms, faster than 59.65% of Python3 online submissions for Reverse Linked List.
-# Memory Usage: 15.4 MB, less than 25.00% of Python3 online submissions for Reverse Linked List.
-
-# Runtime: 36 ms, faster than 59.65% of Python3 online submissions for Reverse Linked List.
-# Memory Usage: 15.4 MB, less than 25.00% of Python3 online submissions for Reverse Linked List.
 
 
 

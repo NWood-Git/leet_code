@@ -49,3 +49,9 @@ while current:
 # Success Details: 
 # Runtime: 28 ms, faster than 88.30% of Python3 online submissions for Remove Nth Node From End of List.
 # Memory Usage: 13.6 MB, less than 6.06% of Python3 online submissions for Remove Nth Node From End of List.
+
+# Runtime: 20 ms, faster than 99.50% of Python3 online submissions for Remove Nth Node From End of List.
+# Memory Usage: 13.9 MB, less than 6.06% of Python3 online submissions for Remove Nth Node From End of List.
+
+# Runtime: 28 ms, faster than 88.30% of Python3 online submissions for Remove Nth Node From End of List.
+# Memory Usage: 13.7 MB, less than 6.06% of Python3 online submissions for Remove Nth Node From End of List.

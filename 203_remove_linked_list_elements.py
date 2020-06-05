@@ -26,4 +26,9 @@ def removeElements(head, val):
             current = current.next
     return  head
 
+# Success - Details 
+# Runtime: 64 ms, faster than 92.16% of Python3 online submissions for Remove Linked List Elements.
+# Memory Usage: 16.7 MB, less than 90.67% of Python3 online submissions for Remove Linked List Elements.
 
+# Runtime: 72 ms, faster than 59.14% of Python3 online submissions for Remove Linked List Elements.
+# Memory Usage: 16.7 MB, less than 93.81% of Python3 online submissions for Remove Linked List Elements.
